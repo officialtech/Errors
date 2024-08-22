@@ -34,17 +34,19 @@ I will post all the errors and possible solutions here on random topics
 
 
 ***
-### ERROR: Could not install packages due to an OSError: [Errno 13] Permission denied: '/var/www/fourthX.com/djpdf/venv/lib/python3.12/site-packages/decouple.py'Check the permissions.
-
-##### WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable.It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
-
+<details>
+  
+  <summary>ERROR: Could not install packages due to an OSError: [Errno 13] Permission denied: '/var/www/fourthX.com/djpdf/venv/lib/python3.12/site-packages/decouple.py'Check the permissions.</summary>
+  
+  ##### WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable.It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+  Here are the possible solutions
+  ```bash
+    Change the ownership, using below command
+    `sudo chown your_username /var/www/fourthX.com/djpdf`
+    The chown command (short for "change owner") is used to change the owner and/or group of a file or directory in a Unix-like operating system. This is particularly useful when you need to grant or revoke access permissions to a specific user or group.
 ```
-change the ownership, using below command
-sudo chown your_username /var/www/fourthX.com/djpdf
-The chown command (short for "change owner") is used to change the owner and/or group of a file or directory in a Unix-like operating system. This is particularly useful when you need to grant or revoke access permissions to a specific user or group.
-```
 
-
+</details>
 
 
 
